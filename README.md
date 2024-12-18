@@ -36,7 +36,7 @@ To run the training process, you'll need the following environment setup. You ca
 The training command is as follows:
 
 ```bash
-accelerate launch --multi_gpu --mixed_precision=fp16 --num_processes=8 train.py \
+accelerate launch --multi_gpu --mixed_precision=fp16 train.py \
   --use_ema \
   --resolution=512 --center_crop --random_flip \
   --train_batch_size=2 \
@@ -54,7 +54,6 @@ accelerate launch --multi_gpu --mixed_precision=fp16 --num_processes=8 train.py 
 #### Parameters breakdown:
 - `--multi_gpu`: Enable multi-GPU training.
 - `--mixed_precision=fp16`: Use mixed precision training to speed up the training and reduce memory usage.
-- `--num_processes=8`: The number of processes to launch, typically corresponding to the number of GPUs.
 - `--use_ema`: Use Exponential Moving Average (EMA) of model weights to improve stability.
 - `--resolution=512`: Set the image resolution to 512x512.
 - `--center_crop --random_flip`: Apply data augmentation techniques (center crop and random horizontal flip).
