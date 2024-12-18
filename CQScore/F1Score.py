@@ -10,8 +10,7 @@ def gettext_result(sentence):
     nlp = spacy.load("en_core_web_sm")
     p = inflect.engine()
     def plural_to_singular(word):
-        # 使用 inflect 库将复数转换为单数
-        return p.singular_noun(word) or word  #
+        return p.singular_noun(word) or word  
 
     def keep_quantifiers_and_nouns(sentence):
         # Process the sentence using spaCy
@@ -29,10 +28,8 @@ def gettext_result(sentence):
 
     def word_to_number(word):
         try:
-            # 将单词转换为数字
             return w2n.word_to_num(word)
         except ValueError:
-            # 处理无法转换的情况
             return None
     def getdirt(sentence):
         doc = nlp(sentence)
@@ -110,8 +107,3 @@ def getF1score(imagePath, prompt):
     else:
         f1 = 2*Macro_Precision*Macro_Recall/(Macro_Precision+Macro_Recall)
     return f1
-
-# test
-# imagePath = "samples_images copy/image_78.png"
-# prompt = " three skiers look over edge of balcony to the slopes below."
-# print(getF1score(imagePath, prompt))
