@@ -2,6 +2,8 @@
 
 Our dataset can be accessed at: [Dataset link](https://drive.google.com/file/d/1jH3nr4chumkU99D2l-rzHL70g2vDnQsn/view?usp=sharing).
 
+Our model parameters can be accessed at: [Model link](https://www.alipan.com/s/fgjiUBwunew).
+
 ### Environment
 
 To run the training process, you'll need the following environment setup. You can easily create the necessary environment using the provided `environment.yml` file.
